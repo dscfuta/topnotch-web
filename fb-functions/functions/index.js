@@ -1,29 +1,35 @@
-import* as functions from 'firebase-functions';
-import { initializeApp, firestore as messaging } from 'firebase-admin';
+const functions = require('firebase-functions');
+const admin = require('firebase-admin');
 
-initializeApp();
+admin.initializeApp()
 
-export const notifyNewMsg = functions.document('Users Request/{docId}').onCreate(async (docSnapshot, context) => {
-        const message = docSnapshot.data()
+exports.notifyNewMsg = functions.firestore.document('UsersRequests/{docId}').onCreate((docSnapshot, context) => {
 
-        const name = message['']
-        const eventType = message['']
+    let docId = context.params;
+
+    if (typeof docId !== "string") {
+      console.warn(`Invalid params, expected 'docId'`, context.params);
+
+      docId = docSnapshot.ref.parent.parent.id;
+    }
+
+        const message = docId.data()
+
+        const name = message['name']
+        const eventType = message['event_type']
 
         const payLoad = {
             notification: {
                 title: `${name} `,
                 body: `${name} is requestion for ${eventType}`,
                 // clickAction: "Activity"
-            },
-            data: {
-                USER_NAME: senderName
-            } 
+            }
         };
-        const sendMessage = await messaging().sendToTopic("Owner", payLoad)
+        const sendMessage = admin.messaging().sendToTopic("Owner", payLoad)
         .then((response) => {
             return console.log(`${response}`)
         }).catch((error) => {
-            return console.log(`${error}`)
+            return console.log(`${error.message}`)
         })
         return sendMessage
 })
