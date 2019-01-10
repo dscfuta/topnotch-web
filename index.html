@@ -13,6 +13,7 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale 1.0">
 		<link rel="stylesheet" type="text/css" href="styles/main.css">
+		<link rel="stylesheet" type="text/css" href="styles/font/css/font-awesome.min.css">
 
 	</head>
 
@@ -20,65 +21,121 @@
 
 		<section>
 
-			<div class="row"><!-- this div wraps other divs that contain informations about the business and the owner-->
+			<div class="row slider_container"><!-- this div wraps other divs that contain informations about the business and the owner-->
 
-				<div class="col-md-6"><!-- this div contains the business's image-->
-					<img src="" alt="">
+				<div class="row myslides fade">
+
+					<div class="col-md-6"><!-- this div contains the business's image-->
+						<img src="assets/logo.jpg" alt="logo"/>
+					</div>
+
+					<div class="col-md-6 about_business"><!-- this div contains descriptions of the business-->
+						<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis eaque, soluta et eveniet vitae ratione incidunt rem deleniti quidem sequi laudantium harum eligendi porro a debitis ex illum non cumque? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis eaque, soluta et eveniet vitae ratione incidunt rem deleniti quidem sequi laudantium harum eligendi porro a debitis ex illum non cumque? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis eaque, soluta et eveniet vitae ratione incidunt rem deleniti quidem sequi laudantium harum eligendi porro a debitis ex illum non cumque? </p>
+					</div>
+				
 				</div>
 
-				<div class="col-md-6"><!-- this div contains descriptions of the business-->
-					<p></p>
+				<div class="row myslides fade">
+
+					<div class="col-md-6"><!-- this div contains the business owner's image-->
+						<img src="assets/logo.jpg" alt="logo"/>
+					</div>
+
+					<div class="col-md-6 about_business"><!-- this div contains descriptions of the business-->
+						<p>ipsum dolor sit amet consectetur adipisicing elit. Nobis eaque, soluta et eveniet vitae ratione incidunt rem deleniti quidem sequi laudantium harum eligendi porro a debitis ex illum non cumque? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis eaque, soluta et eveniet vitae ratione incidunt rem deleniti quidem sequi laudantium harum eligendi porro a debitis ex illum non cumque? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis eaque, soluta et eveniet vitae ratione incidunt rem deleniti quidem sequi laudantium harum eligendi porro a debitis ex illum non cumque?</p>
+					</div>
+
 				</div>
 
-				<div class="col-md-6"><!-- this div contains the business owner's image-->
-					<img src="" alt="">
+				<a class="prev" onclick="nextSlide(-1)">&#10094;</a>
+				<a class="next" onclick="nextSlide(1)">&#10095;</a>
+
+			</div><br>
+
+			<div style="text-align:center;">
+				<span class="dot" onclick="currentSlide(1)"></span> 
+				<span class="dot" onclick="currentSlide(2)"></span> 
+			</div>
+
+			<div class="row services">
+
+				<div class="col-md-12 service_heading">
+
+					<h1> SERVICES WE PROVIDE </h1>
+						
+					<p>For a great event, you cannot go wrong with Topnotch Euphoria</p>
+
+				</div>
+
+
+				<div class="row event_planning"><!-- this div wraps other divs that contain information about the services provided-->
+
+					<h2 class="col-md-12"> Event Management and Planning</h2>	
+
+					<div class="col-md-6"><!--this div contains svg/png that describe the service-->
+						<img src="assets/event_planning.png" alt="logo"/>
+					</div>
+
+					<div class="col-md-6"><!--this div contains description about the service and a button to request for such service -->
+						<p>At Topnotch Euphoria, we understand that every event differ in nature and we are ever ready to provide you with event planning services (including but not limited to budgeting, event decoration, arranging speakers or entertainers scheduling, securing venues) that befit your event type. </p>
+						<div class="button"><button type="button"><a href="form.html">Request Service</a></button></div>
+					</div>
+
 				</div>
 
 			</div>
 
-			<div class="row"><!-- this div wraps other divs that contain information about the services provided-->
+			<div class="row ushering event_planning"><!-- this div wraps other divs that contain information about the services provided-->
+
+				<h2 class="col-md-12">Event Ushering</h2>	
 
 				<div class="col-md-6"><!--this div contains description about the service and a button to request for such service -->
-					<p></p>
-					<button></button>
+					<p>Make your guests feel pampered and welcomed at your event by employing the service of our collection of topnotch ushers who are cheerful, humble, beautiful, dutiful and respectable to welcome, direct and attend to your guests' basic needs during your event.</p>
+					<div class="button"><button type="button"><a href="form.html">Request Service</a></button></div>
 				</div>
 
 				<div class="col-md-6"><!--this div contains svg/png that describe the service-->
+					<img src="assets/ushering.png" alt="logo"/>
 				</div>
 
 			</div>
 
-			<div class="row"><!-- this div wraps other divs that contain information about the services provided-->
+			<div class="row catering event_planning"><!-- this div wraps other divs that contain information about the services provided-->
 
-				<div class="col-md-6"><!--this div contains description about the service and a button to request for such service -->
-					<p></p>
-					<button></button>
-				</div>
-
-				<div class="col-md-6"><!--this div contains svg/png that describe the service-->
-
-				</div>
-
-			</div>
-
-			<div class="row"><!-- this div wraps other divs that contain information about the services provided-->
+				<h2 class="col-md-12"> Indoor and Outdoor Catering</h2>	
 
 				<div class="col-md-6"><!--this div contains svg/png this describe the service-->
-
+					<img src="assets/catering.png" alt="logo"/>
 				</div>
 
 				<div class="col-md-6"><!--this div contains description about the service and a button to request for such service -->
-					<p></p>
-					<button></button>
+					<p>Good food makes a great event, your guests may not remember how beautifully dressed you were or how good the music was at your event but they will remember how good the food tasted and how surplus it was. Let Topnotch Euphoria provide your guests with delicious and healthy meals.</p>
+					<div class="button"><button type="button"><a href="form.html">Request Service</a></button></div>
 				</div>
 
 			</div>
 
 		</section>
 
-		<footer>
-			<!-- The developed with [love] by DSC FUTA will be in the footer-->
+		<footer class="row footer">
+
+			<div class="col-md-12">
+				<p>STAY IN TOUCH</p>
+			</div>
+
+			<div class="icon row">
+				<a href="www.instagram.com/topnotcheuphoria" class="icon fa-instagram" ></a>
+				<a href="www.facebook.com/topnotcheuphoria" class="icon fa-facebook-f"></a>
+				<a href="www.twitter.com/euphoriatop" class="icon fa-twitter"></a>
+			</div>
+
+			<div class="col-md-12">
+				<p>developed with <b class="love fa-heart"></b> by DSC FUTA</p>
+			</div>
+			
 		</footer>
+
+		<script type="text/javascript" src="main.js"></script>
 
 	</body>
 
