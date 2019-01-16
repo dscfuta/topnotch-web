@@ -38,35 +38,54 @@ function submitForm(e){
     var event_date = getInputValue('event_date');
    
      //getting input from a checkbox
-    var service = []; 
+    var service_type = []; 
     var inputElements = document.getElementsByClassName('messageCheckbox');
     for(var i=0; inputElements[i] ; i++){
       if(inputElements[i].checked === true){
-           service.push (inputElements[i].value);
+           service_type.push (inputElements[i].value);
       } 
     }
-        console.log(service);
+        console.log(service_type);
 
-        for (var i = 0 ; i < service.length ; i++){
-                console.log(service[i]);
+        for (var i = 0 ; i < service_type.length ; i++){
+                console.log(service_type[i]);
             }
 
             console.log(event_date);
-
-        saveMessage(email,event_location,event_type,name,phone,service,event_date);
+         
+            
+               saveMessage(email,event_location,event_type,name,phone,service_type,event_date);
+                 
+          
+       
+               getConfirmation();
+        
 
     
 }
+    
 
-function saveMessage(email,event_location,event_type,name,phone,service,event_date){
+          async function getConfirmation() {
+               var retVal = confirm("Do you still want to make a request ?");
+               if( retVal == true ) {
+                 window.location.href = "form.html";
+                   return await true;
+               } else {
+                  window.location.href = "index.html";
+                  return await false;
+               }
+            }
+
+
+function saveMessage(email,event_location,event_type,name,phone,service_type,event_date){
     // var newMessageRef = messageRef.push();
-    database.collection('User Request').add({
+    database.collection('UsersRequestss').add({
         email:email,
         event_location:event_location,
         event_type:event_type,
         name:name,
         phone:phone,
-        service:service,
+        service_type:service_type,
         event_date: event_date
 
     });

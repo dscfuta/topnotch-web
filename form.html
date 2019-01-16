@@ -25,6 +25,8 @@
 
             <div class="row">
 
+
+
                 <p class="col-md-12 header">Service Request Form</p>
 
                 <form class="col-md-12 form" id="contactForm" name = myForm ><!--The form should be at the center with a purple background taking the remaining part of the screen-->
@@ -46,17 +48,17 @@
 
                     <div class="input_container">                            
                         <span class="input_icon fa-calendar"></span>
-                        <input type="text" id = "event_date" name="event_date" placeholder="Event Date (dd/mm/yyyy)" maxlength="10" >
+                        <input type="date" id = "event_date" name="event_date" placeholder="Event Date (dd/mm/yyyy)"   required>
                     </div>
 
                     <div class="input_container">    
                         <span class="input_icon fa-phone"></span>
-                        <input type="text" id = "phone" name="phone" placeholder="Phone Number" >
+                        <input type="number" maxlength= "11" id = "phone" name="phone" placeholder="Phone Number" required >
                     </div>
 
                     <div class="input_container">                            
                         <span class="input_icon fa-envelope-o"></span>
-                        <input type="text" id = "email" name="email" placeholder="Email Address">
+                        <input type="text" id = "email" name="email" placeholder="Email Address" required>
                     </div>
 
                     <div class="checkbox">
