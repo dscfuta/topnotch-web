@@ -53,33 +53,31 @@ function submitForm(e){
 
             console.log(event_date);
          
-            
-               saveMessage(email,event_location,event_type,name,phone,service_type,event_date);
-                 
-          
-       
-               getConfirmation();
+              saveMessage(email,event_location,event_type,name,phone,service_type,event_date)
+
+               
         
 
     
 }
     
 
-          async function getConfirmation() {
-               var retVal = confirm("Do you still want to make a request ?");
-               if( retVal == true ) {
-                 window.location.href = "form.html";
-                   return await true;
-               } else {
-                  window.location.href = "index.html";
-                  return await false;
-               }
-            }
+function getConfirmation() {
+   // var retVal = ;
+   if( confirm("Do you still want to make a request ?") ) {
+     return window.location.href = "form.html";
+       // return  true;
+   } else {
+      return window.location.href = "index.html";
+      // return  false;
+   }
+         // console.log("true")
+}
 
 
 function saveMessage(email,event_location,event_type,name,phone,service_type,event_date){
     // var newMessageRef = messageRef.push();
-    database.collection('UsersRequestss').add({
+    var process = database.collection('UsersRequestss').add({
         email:email,
         event_location:event_location,
         event_type:event_type,
@@ -88,6 +86,8 @@ function saveMessage(email,event_location,event_type,name,phone,service_type,eve
         service_type:service_type,
         event_date: event_date
 
+    }).then(()=>{
+      getConfirmation();
     });
 }
 
