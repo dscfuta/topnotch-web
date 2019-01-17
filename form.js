@@ -82,7 +82,7 @@ function saveMessage(email,event_location,event_type,name,phone,service_type,eve
         event_location:event_location,
         event_type:event_type,
         name:name,
-        phone:phone,
+        phone:phone, 
         service_type:service_type,
         event_date: event_date
 
