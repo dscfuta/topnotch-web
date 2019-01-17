@@ -77,7 +77,7 @@ function getConfirmation() {
 
 function saveMessage(email,event_location,event_type,name,phone,service_type,event_date){
     // var newMessageRef = messageRef.push();
-    var process = database.collection('UsersRequestss').add({
+    var process = database.collection('UsersRequests').add({
         email:email,
         event_location:event_location,
         event_type:event_type,
