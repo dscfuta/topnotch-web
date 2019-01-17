@@ -73,7 +73,7 @@ function getConfirmation() {
    }
          // console.log("true")
 }
-
+ 
 
 function saveMessage(email,event_location,event_type,name,phone,service_type,event_date){
     // var newMessageRef = messageRef.push();
