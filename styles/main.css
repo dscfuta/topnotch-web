@@ -242,7 +242,6 @@ body{
 	.exe_nav ul li{
 		display:inline-block;
 	}
-	
 	.about img{
 		display:block;
 		max-height:400px;
@@ -301,3 +300,4 @@ body{
 	.button button{margin-bottom:25px;}
 
 	.icon{margin:5px 30px 30px 30px;}
+}

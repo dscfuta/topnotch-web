@@ -13,7 +13,6 @@
 		<meta name="viewport" content="width=device-width, initial-scale 1.0">
         <link rel="stylesheet" type="text/css" href="styles/form.css">
         <link rel="stylesheet" type="text/css" href="styles/font/css/font-awesome.min.css">
-
 	</head>
 
     <body>
@@ -24,26 +23,23 @@
             </div>
 
             <div class="row">
-
-
-
                 <p class="col-md-12 header">Service Request Form</p>
 
                 <form class="col-md-12 form" id="contactForm" name = myForm ><!--The form should be at the center with a purple background taking the remaining part of the screen-->
 
                     <div class="input_container">
                         <span class="input_icon fa-user-o"></span>
-                        <input type="text" id = "name" name="name" placeholder="Your Name" >
+                        <input type="text" id = "name" name="name" placeholder="Your Name" required>
                     </div>
 
                     <div class="input_container">
                         <span class="input_icon fa-bell-o"></span>                            
-                        <input type="text" id = "event_type" name="event_type" placeholder="Event Type e.g. Wedding, Conference etc" >	
+                        <input type="text" id = "event_type" name="event_type" placeholder="Event Type e.g. Wedding, Conference etc" required>	
                     </div>
 
                     <div class="input_container">
                         <span class="input_icon fa-map-marker"></span>
-                        <input type="text" id = "event_location" name="event_location" placeholder="Event Location" >
+                        <input type="text" id = "event_location" name="event_location" placeholder="Event Location" required>
                     </div>
 
                     <div class="input_container">                            
@@ -65,11 +61,10 @@
 
                         <p>Required Service(s):</p>
 
-                        
-                        <input type="checkbox" class="messageCheckbox" name="mailId[]" value="outdoorcatering">Outdoor Catering<br>
-                        <input type="checkbox" class="messageCheckbox" name="mailId[]" value="indoorcatering">Indoor Catering<br>
-                        <input type="checkbox" class="messageCheckbox" name="mailId[]" value="EventManagementandplanning">Event Management and Planning<br>
-                        <input type="checkbox" class="messageCheckbox" name="mailId[]" value="EventUshering">Event Ushering<br>
+                        <input type="checkbox" class="messageCheckbox" name="mailId[]" value="Outdoor Catering">Outdoor Catering<br>
+                        <input type="checkbox" class="messageCheckbox" name="mailId[]" value="Indoor Catering">Indoor Catering<br>
+                        <input type="checkbox" class="messageCheckbox" name="mailId[]" value="Event Management & planning">Event Management & Planning<br>
+                        <input type="checkbox" class="messageCheckbox" name="mailId[]" value="Event Ushering">Event Ushering<br>
                 
                     </div>
 
@@ -91,5 +86,4 @@
         <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-firestore.js"></script>
         <script src="form.js"></script>
     </body>
-
 </html>

@@ -5,7 +5,7 @@ admin.initializeApp()
 
 exports.notifyNewMsg = functions.firestore.document('UsersRequests/{docId}').onCreate((docSnapshot, context) => {
 
-    let docId = context.params;
+    let {docId} = context.params;
 
     if (typeof docId !== "string") {
       console.warn(`Invalid params, expected 'docId'`, context.params);
@@ -13,7 +13,7 @@ exports.notifyNewMsg = functions.firestore.document('UsersRequests/{docId}').onC
       docId = docSnapshot.ref.parent.parent.id;
     }
 
-        const message = docId.data()
+        const message = docSnapshot.data()
 
         const name = message['name']
         const eventType = message['event_type']
