@@ -35,7 +35,8 @@ function submitForm(e){
     var event_type = getInputValue('event_type');
     var name = getInputValue('name');
     var phone = getInputValue('phone');
-    var event_date = getInputValue('event_date');
+    var date = getInputValue('event_date');
+    var event_date = new Date (date).toDateString()
    
      //getting input from a checkbox
     var service_type = []; 
@@ -73,6 +74,7 @@ function getConfirmation() {
    }
          // console.log("true")
 }
+ 
  
 
 function saveMessage(email,event_location,event_type,name,phone,service_type,event_date){
